@@ -1,0 +1,66 @@
+name: Run Selenium Tests and Send Failed Test Screenshots via Email
+
+on:
+  push:
+    branches:
+      - master  # Trigger on push to the main branch
+  pull_request:
+    branches:
+      - master  # Trigger on pull request to the main branch
+
+jobs:
+  run_tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up .NET environment
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '6.0'
+
+      # Step 3: Restore dependencies
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # Step 4: Build the project
+      - name: Build the project
+        run: dotnet build --configuration Release
+
+      # Step 5: Run tests and save screenshots on failure
+      - name: Run tests and save screenshots on failure
+        run: |
+          dotnet test --logger "trx" --configuration Release
+          if [ $? -ne 0 ]; then
+            echo "Tests failed, uploading screenshots"
+            tar -czvf screenshots.tar.gz screenshots/
+          fi
+        continue-on-error: true
+        env:
+          DISPLAY: ":99"  # Required for headless Chrome to work in GitHub Actions environment
+
+      # Step 6: Upload test screenshots as artifacts (in case of failure)
+      - name: Upload test screenshots as artifacts (in case of failure)
+        if: failure()  # This ensures screenshots are uploaded only on failure
+        uses: actions/upload-artifact@v3
+        with:
+          name: screenshots
+          path: screenshots/*.png  # Path to your screenshots
+
+      # Step 7: Send email with screenshot on failure
+      - name: Send email with screenshot on failure
+        if: failure()  # Only trigger this if the tests fail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.mailgun.org
+          server_port: 587
+          username: ${{ secrets.MAILGUN_USERNAME }}   # Mailgun username (e.g., "postmaster@mg.yourdomain.com")
+          password: ${{ secrets.MAILGUN_API_KEY }}     # Your Mailgun API key
+          from: 'sanathk794@gmail.com'             # Your email address (e.g., "youremail@yourdomain.com")
+          to: 'sanathshanthigodu@gmail.com'                  # Developer's email address
+          subject: 'Test case failed, screenshot attached'
+          body: 'One or more test cases failed. Please find the attached screenshot(s).'
+          attachments: screenshots/*.png               # Attach all screenshots
