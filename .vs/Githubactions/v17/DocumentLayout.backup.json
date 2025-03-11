@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\sakum\\source\\repos\\Githubactions\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\utilities\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|solutionrelative:githubactions\\utilities\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|solutionrelative:githubactions\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\locators\\loginlocator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|solutionrelative:githubactions\\locators\\loginlocator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\stepdefinitions\\happyflowstepdefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|solutionrelative:githubactions\\stepdefinitions\\happyflowstepdefinitions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|solutionrelative:githubactions\\githubactions.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\utilities\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|solutionrelative:githubactions\\utilities\\hooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\pages\\checkoverviewpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|solutionrelative:githubactions\\pages\\checkoverviewpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|solutionrelative:githubactions\\pages\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\locators\\addtocartlocator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\pages\\itempage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|solutionrelative:githubactions\\pages\\itempage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\locators\\loginlocator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|solutionrelative:githubactions\\locators\\loginlocator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAA24C9E-0613-4CC3-B7CC-2D827D827320}|Githubactions\\Githubactions.csproj|c:\\users\\sakum\\source\\repos\\githubactions\\githubactions\\locators\\itemlocator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,32 +66,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 356,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Hooks.cs",
               "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Utilities\\Hooks.cs",
               "RelativeDocumentMoniker": "Githubactions\\Utilities\\Hooks.cs",
-              "ToolTip": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Utilities\\Hooks.cs",
-              "RelativeToolTip": "Githubactions\\Utilities\\Hooks.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Utilities\\Hooks.cs*",
+              "RelativeToolTip": "Githubactions\\Utilities\\Hooks.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAABXwAQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T05:26:43.415Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HappyflowStepDefinitions.cs",
-              "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\StepDefinitions\\HappyflowStepDefinitions.cs",
-              "RelativeDocumentMoniker": "Githubactions\\StepDefinitions\\HappyflowStepDefinitions.cs",
-              "ToolTip": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\StepDefinitions\\HappyflowStepDefinitions.cs",
-              "RelativeToolTip": "Githubactions\\StepDefinitions\\HappyflowStepDefinitions.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAjwJIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T10:14:39.309Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -99,12 +87,21 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HappyflowStepDefinitions.cs",
+              "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\StepDefinitions\\HappyflowStepDefinitions.cs",
+              "RelativeDocumentMoniker": "Githubactions\\StepDefinitions\\HappyflowStepDefinitions.cs",
+              "ToolTip": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\StepDefinitions\\HappyflowStepDefinitions.cs",
+              "RelativeToolTip": "Githubactions\\StepDefinitions\\HappyflowStepDefinitions.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAIA4wJIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T10:14:39.309Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CheckOutPage.cs",
               "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Pages\\CheckOutPage.cs",
               "RelativeDocumentMoniker": "Githubactions\\Pages\\CheckOutPage.cs",
@@ -116,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CheckOverviewPage.cs",
               "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Pages\\CheckOverviewPage.cs",
               "RelativeDocumentMoniker": "Githubactions\\Pages\\CheckOverviewPage.cs",
@@ -128,7 +125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ItemPage.cs",
               "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Pages\\ItemPage.cs",
               "RelativeDocumentMoniker": "Githubactions\\Pages\\ItemPage.cs",
@@ -140,19 +137,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "LoginPage.cs",
               "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Pages\\LoginPage.cs",
               "RelativeDocumentMoniker": "Githubactions\\Pages\\LoginPage.cs",
               "ToolTip": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Pages\\LoginPage.cs",
               "RelativeToolTip": "Githubactions\\Pages\\LoginPage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T05:11:24.289Z"
+              "WhenOpened": "2025-03-11T05:11:24.289Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AddCart.cs",
               "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Pages\\AddCart.cs",
               "RelativeDocumentMoniker": "Githubactions\\Pages\\AddCart.cs",
@@ -160,12 +158,11 @@
               "RelativeToolTip": "Githubactions\\Pages\\AddCart.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T05:10:35.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T05:10:35.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "LoginLocator.cs",
               "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Locators\\LoginLocator.cs",
               "RelativeDocumentMoniker": "Githubactions\\Locators\\LoginLocator.cs",
@@ -173,7 +170,8 @@
               "RelativeToolTip": "Githubactions\\Locators\\LoginLocator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T05:09:09.783Z"
+              "WhenOpened": "2025-03-11T05:09:09.783Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -213,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AddtocartLocator.cs",
               "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Locators\\AddtocartLocator.cs",
               "RelativeDocumentMoniker": "Githubactions\\Locators\\AddtocartLocator.cs",
@@ -225,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Githubactions.csproj",
               "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Githubactions.csproj",
               "RelativeDocumentMoniker": "Githubactions\\Githubactions.csproj",
@@ -233,12 +231,11 @@
               "RelativeToolTip": "Githubactions\\Githubactions.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-11T05:00:36.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T05:00:36.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Happyflow.feature",
               "DocumentMoniker": "C:\\Users\\sakum\\source\\repos\\Githubactions\\Githubactions\\Features\\Happyflow.feature",
               "RelativeDocumentMoniker": "Githubactions\\Features\\Happyflow.feature",
@@ -246,8 +243,11 @@
               "RelativeToolTip": "Githubactions\\Features\\Happyflow.feature",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASFSURBVEhLjVVpbBVVFP7m7X1btS1dnqR00TZCKIhtA9WiQIiJBn9hfxRNEzEk9AclscQN40LSmNQuRiL\u002BEJSECDH6g5hgiRKLNi2WlAIPlEZrq3R7tLWvy\u002BvbZ/zuvOlbsDX9Jt/MOefOPefOOefekbAanHMBStRKyUIqkOCHzRrAniF1eEUoirJygCqLDmXGfFRbK6FDFS2FZDopk9PkEGSlBz8FrsIdHkW3X6HtP1g\u002BwPvkwzk1HH2F0kYykzSQSxDOwuQU2UetFbWey2LgfqQGeIDqRw85YAo3Uns7ZlwVFF51\u002BHzuK3zvD2k2FXrtGcONNDPuGespNZA2YbIbbNiRXQ2DpMdMyAurPg3Va7YiNy0bI4tj4hUBidcmbDYPwysPYCiimcHsJqPP\u002BRjvIkCWqhPP5O7AycoWvLm\u002BAWvMmdiSUYbj5U04VdHOySnT88l6vOzIiakxJN44km7iKo5TKiAlMVlc3vA8MkwPYltmOdbaXKjKqkCJvQjz4QVWW9Q7DgPn74ROegnWROYTKapKq4bL8BolSaThxYIX8IizCDe9v2I\u002B4oMv6kPHRKeaKovejGO/teEv393Y3ASE51IUGD9DV0CtRSxUmVmHQ\u002BnvwiYdFerWzMdxYfuXCMthdE52Y3/vq6yFFVPBaZjp3Gmw415oClE5qk6/Dwr6gk/hQ2\u002BXUGIpskt2Oi9SZeLGzG2cH\u002BuAh05K\u002BRUl9kJMBDyIKBH4\u002BDXjlFdwLiAWvSkmJmpgIsUuVeGXA6jvex0HehtRd\u002BUwrntvaSOpEEV3Gh2aloJ4k2gBFLGceG\u002BJnjtYXIejGxrw1vpDyEtLaQwV\u002Bwv34ey2E2o37crdrlnjiFc5FkCSFnkX21/Fk1mVaNr4Bnay/wvt\u002BVhgWsRKdewtg2SAjfUYXvwbJY5iPOvahS8q27WZcYxqT62LFESxwZwHp\u002B55oQYiIRh1Rlye7EHrwKdqi\u002B4r2IuB\u002BUEU2wtwuOQA\u002BmfcuOT5GXcXx3F\u002B9CKuzdxUXakYjzahO6AGSTTskXQXtlgGKZmFatFZGFdGriUHv\u002By\u002BgIAcRG3PQRQxwMmKFtblNp74YQ/0bNsoMywaQMM4rvmL0TwXEEpiozXPjjHcMUp\u002BoQZY6KAcosN8mPg1d\u002BYGMe734M\u002BFYQyx/9dZ1yLTnMF3gsnO6VRpWnIukHoW7XX8wfujpGhZdWw6OKO25bdjF\u002BGevaPqvy8M4buJS\u002Bj/x62echq4rXl8S/gAX/vmNFtSigSy\u002BEEf8yQDPiE3qzZCFJf/jrgzHacJKcm5AI9upRFZU2ewW46fIalfsMgJ3/hGYJa6UGpaR0sGaaajRCqJFLcx8CyR29E2ewrNkaBmU5EaYAnu0CRqHT\u002Byt8RhI/aIkxS/zJRAhIjlIU\u002BgzduO66F4apaQmqJkmDn0nFNCjdUJRS6jpYUsV8cSmCDfY5jT/KPFC5uMlQMk45wrj0HOcMFPU/ORI\u002BQV9Ida0Rm8hV6xT5fH6gKczRVnyzsMkM3nVTZMN04vuNHhn1fH/werDSBynw693o\u002Ba0WVTsTyAfwENCYeqQkKfxQAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-03-11T04:59:36.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-11T04:59:36.147Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Bookmark",

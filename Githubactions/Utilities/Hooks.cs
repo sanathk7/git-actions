@@ -1,5 +1,5 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel;
+using System.IO;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -11,84 +11,65 @@ namespace Githubactions.Utilities
     public class Hooks
     {
         public static IWebDriver driver;
-        public readonly string _screenshotPath = "screenshots/";
+        private static string screenshotsFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "TestResults", "Screenshots");
 
-        // Constructor to initialize WebDriver
-        public Hooks()
-        {
-            if (driver == null)
-            {
-                // Set up headless browser options
-                ChromeOptions options = new ChromeOptions();
-                options.AddArgument("--headless");  // Run Chrome in headless mode
-                options.AddArgument("--disable-gpu");  // Disable GPU acceleration in headless mode
-                options.AddArgument("--window-size=1920x1080"); // Set screen resolution for headless mode
-                options.AddArgument("--no-sandbox"); // Disable sandbox feature for CI environments
-
-                // Initialize ChromeDriver with the specified options
-                driver = new ChromeDriver(options);
-
-                // Ensure the screenshots directory exists
-                if (!System.IO.Directory.Exists(_screenshotPath))
-                {
-                    System.IO.Directory.CreateDirectory(_screenshotPath);
-                }
-            }
-        }
-
-        // Before Feature Hook - Initialize the browser before a feature starts
-        [BeforeFeature]
-        public static void StartBrowserForLogin()
-        {
-            // This is executed once before all scenarios in the feature
-            Console.WriteLine("Executing Feature Setup...");
-        }
-
-        // Before Scenario Hook - Set up the browser before each scenario
+        // Hook to initialize the browser before each scenario
         [BeforeScenario]
         public void BeforeScenario()
         {
-            // Navigate to the desired URL for each scenario
-            driver.Navigate().GoToUrl("https://yourapp.com");
-            Console.WriteLine("Starting test scenario...");
+            // Chrome options for headless mode
+            ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--headless");
+            options.AddArgument("--window-size=1920x1080");
+
+            // Initialize ChromeDriver with options
+            driver = new ChromeDriver(options);
+            driver.Manage().Window.Maximize();
         }
 
-        // After Scenario Hook - Capture screenshot on failure and close browser
+        // Hook to close the browser after each scenario
         [AfterScenario]
         public void AfterScenario()
         {
-            if (driver != null && ScenarioContext.Current.TestError !=null)
+            // Take a screenshot if the scenario fails
+            if (ScenarioContext.Current.TestError != null)
             {
                 TakeScreenshot();
             }
-            Console.WriteLine("Scenario executed.");
-        }
 
-        // After Feature Hook - Clean up after all scenarios in the feature
-        [AfterFeature]
-        public static void CloseBrowser()
-        {
             if (driver != null)
             {
-                driver.Quit();
-                driver = null;
-                Console.WriteLine("Browser closed after feature.");
+                driver.Quit();  // Close and dispose the driver
             }
         }
 
-        // Method to capture a screenshot when a scenario fails
+        // Method to take a screenshot
         private void TakeScreenshot()
         {
-            var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
-            var screenshotFile = System.IO.Path.Combine(_screenshotPath, $"screenshot_{DateTime.Now:yyyyMMdd_HHmmss}.png");
-            screenshot.SaveAsFile(screenshotFile);
-            Console.WriteLine($"Screenshot taken and saved at {screenshotFile}");
-        }
+            try
+            {
+                // Ensure the screenshots directory exists
+                if (!Directory.Exists(screenshotsFolderPath))
+                {
+                    Directory.CreateDirectory(screenshotsFolderPath);
+                }
 
-        // GetDriver method to access the WebDriver if needed
-        public IWebDriver GetDriver()
-        {
-            return driver;
+                // Create a unique filename with timestamp
+                string timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+                string screenshotFilePath = Path.Combine(screenshotsFolderPath, $"screenshot_{timestamp}.png");
+
+                // Capture the screenshot
+                Screenshot screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+                screenshot.SaveAsFile(screenshotFilePath);
+
+                Console.WriteLine($"Screenshot saved to: {screenshotFilePath}");
+
+                // You can also upload the file as part of the artifacts, but sending it by email needs an extra step in GitHub Actions
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error while taking screenshot: " + ex.Message);
+            }
         }
     }
 }
