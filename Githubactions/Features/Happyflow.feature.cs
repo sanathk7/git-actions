@@ -76,9 +76,6 @@ namespace Githubactions.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("SaugeLab")]
         [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "sanath", "kumar", "553909", null)]
-        [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "sanath", "kumar", "553909", null)]
-        [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauce", "sanath", "kumar", "553909", null)]
-        [NUnit.Framework.TestCaseAttribute("standard_user", "secret_sauc", "ssss", "k", "553909", null)]
         public virtual void SaugeLab(string firstname, string password, string firstname1, string lastname, string zipcode, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;

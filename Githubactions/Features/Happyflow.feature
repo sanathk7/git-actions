@@ -25,8 +25,6 @@ Scenario: SaugeLab
    Examples: 
    | firstname     | password     |    Firstname | lastname | zipcode | 
     | standard_user | secret_sauce |    sanath    | kumar    | 553909 |
-    | standard_user | secret_sauce |    sanath    | kumar    | 553909 |
-    | standard_user | secret_sauce |    sanath    | kumar    | 553909 |
-    | standard_user | secret_sauc |    ssss   |k   | 553909 |
+
 
 
