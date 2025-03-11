@@ -3,10 +3,10 @@ name: Run SpecFlow Tests
 on:
   push:
     branches:
-      - master  # Changed from 'main' to 'master'
+      - master  # Adjusted to 'master' branch
   pull_request:
     branches:
-      - master  # Changed from 'main' to 'master'
+      - master  # Adjusted to 'master' branch
 
 jobs:
   build:
@@ -30,8 +30,8 @@ jobs:
     - name: Run SpecFlow tests
       run: dotnet test --filter FullyQualifiedName~YourSpecFlowTestNamespace
 
-    - name: Upload Test Results (Using v3)
-      uses: actions/upload-artifact@v3  # Updated to v3
+    - name: Upload Test Results (Using v4)
+      uses: actions/upload-artifact@v4  # Updated to v4
       with:
         name: test-results
         path: '**/TestResults/*.xml'  # Adjust the path if needed to where your test results are generated.
