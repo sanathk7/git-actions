@@ -1,37 +1,55 @@
-name: Run SpecFlow Tests
+name: Run Selenium Test (C#)
 
 on:
   push:
     branches:
-      - master  # Adjusted to 'master' branch
+      - master
   pull_request:
     branches:
-      - master  # Adjusted to 'master' branch
+      - master
 
 jobs:
   build:
     runs-on: windows-latest
+    strategy:
+      matrix:
+        # Specify .NET versions for testing
+        dotnet-version: [6.0, 7.0]
 
     steps:
+    # Checkout the repository code
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    # Set up .NET SDK (version will be taken from the matrix)
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '6.x'  # Use the version appropriate for your project
+        dotnet-version: ${{ matrix.dotnet-version }}
 
-    - name: Install dependencies
+    # Restore NuGet packages
+    - name: Restore dependencies
       run: dotnet restore
 
+    # Build the project
     - name: Build the project
-      run: dotnet build
+      run: dotnet build --configuration Release
 
-    - name: Run SpecFlow tests
-      run: dotnet test --filter FullyQualifiedName~YourSpecFlowTestNamespace
+    # Run tests
+    - name: Run Selenium tests
+      run: |
+        # Run your Selenium tests here
+        dotnet test --configuration Release
 
-    - name: Upload Test Results (Using v4)
-      uses: actions/upload-artifact@v4  # Updated to v4
+    # Optionally, upload the test results as artifacts
+    - name: Upload test results
+      uses: actions/upload-artifact@v2
       with:
         name: test-results
-        path: '**/TestResults/*.xml'  # Adjust the path if needed to where your test results are generated.
+        path: TestResults/
+
+    # Optionally, show the results from a previous step (e.g., using NUnit)
+    - name: Show NUnit test results
+      run: |
+        mkdir TestResults
+        echo "Test results will be available in TestResults/ folder"
