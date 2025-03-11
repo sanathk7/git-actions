@@ -3,7 +3,7 @@ name: Run Selenium Test (C#)
 on:
   push:
     branches:
-      - master
+      -master
   pull_request:
     branches:
       - master
@@ -41,9 +41,9 @@ jobs:
         # Run your Selenium tests here
         dotnet test --configuration Release
 
-    # Optionally, upload the test results as artifacts
+    # Optionally, upload the test results as artifacts using the updated action
     - name: Upload test results
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: test-results
         path: TestResults/
