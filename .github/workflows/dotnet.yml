@@ -1,67 +1,37 @@
-name: Run Selenium Tests and Send Failed Test Screenshots via Email
+name: Run SpecFlow Tests
 
 on:
   push:
     branches:
-      - master  # Trigger on push to the main branch
+      - master
   pull_request:
     branches:
-      - master  # Trigger on pull request to the main branch
+      - master
 
 jobs:
-  run_tests:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: windows-latest
 
     steps:
-      # Step 1: Checkout code
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      # Step 2: Set up .NET environment
-      - name: Set up .NET environment
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: '6.0'
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.x'  # Use the version appropriate for your project
 
-      # Step 3: Restore dependencies
-      - name: Restore dependencies
-        run: dotnet restore
+    - name: Install dependencies
+      run: dotnet restore
 
-      # Step 4: Build the project
-      - name: Build the project
-        run: dotnet build --configuration Release
+    - name: Build the project
+      run: dotnet build
 
-      # Step 5: Run tests and save screenshots on failure
-      - name: Run tests and save screenshots on failure
-        run: |
-          dotnet test --logger "trx" --configuration Release
-          if [ $? -ne 0 ]; then
-            echo "Tests failed, uploading screenshots"
-            tar -czvf screenshots.tar.gz screenshots/
-          fi
-        continue-on-error: true
-        env:
-          DISPLAY: ":99"  # Required for headless Chrome to work in GitHub Actions environment
+    - name: Run SpecFlow tests
+      run: dotnet test --filter FullyQualifiedName~YourSpecFlowTestNamespace
 
-      # Step 6: Upload test screenshots as artifacts (in case of failure)
-      - name: Upload test screenshots as artifacts (in case of failure)
-        if: failure()  # This ensures screenshots are uploaded only on failure
-        uses: actions/upload-artifact@v4  # Updated to v4
-        with:
-          name: screenshots
-          path: screenshots/*.png  # Path to your screenshots
-
-      # Step 7: Send email with screenshot on failure
-      - name: Send email with screenshot on failure
-        if: failure()  # Only trigger this if the tests fail
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.mailgun.org
-          server_port: 587
-          username: ${{ secrets.MAILGUN_USERNAME }}   # Mailgun username (e.g., "postmaster@mg.yourdomain.com")
-          password: ${{ secrets.MAILGUN_API_KEY }}     # Your Mailgun API key
-          from: 'sanathk794@gmail.com'             # Your email address (e.g., "youremail@yourdomain.com")
-          to: 'sanathshanthigodu@gmail.com'                  # Developer's email address
-          subject: 'Test case failed, screenshot attached'
-          body: 'One or more test cases failed. Please find the attached screenshot(s).'
-          attachments: screenshots/*.png               # Attach all screenshots
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: '**/TestResults/*.xml'  # Adjust the path if needed to where your test results are generated.
