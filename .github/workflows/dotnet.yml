@@ -1,37 +1,28 @@
-name: Run SpecFlow Tests
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
 
 on:
   push:
-    branches:
-      - master  # Adjusted to 'master' branch
+    branches: [ "master" ]
   pull_request:
-    branches:
-      - master  # Adjusted to 'master' branch
+    branches: [ "master" ]
 
 jobs:
   build:
-    runs-on: windows-latest
+
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: '6.x'  # Use the version appropriate for your project
-
-    - name: Install dependencies
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
       run: dotnet restore
-
-    - name: Build the project
-      run: dotnet build
-
-    - name: Run SpecFlow tests
-      run: dotnet test --filter FullyQualifiedName~YourSpecFlowTestNamespace
-
-    - name: Upload Test Results (Using v4)
-      uses: actions/upload-artifact@v4  # Updated to v4
-      with:
-        name: test-results
-        path: '**/TestResults/*.xml'  # Adjust the path if needed to where your test results are generated.
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
